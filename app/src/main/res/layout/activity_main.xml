@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.display.crazybaby.crazydisplay.MainActivity"
+
+
+    ><android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+     >
+
+    </RelativeLayout>
+
+
+    <com.tencent.smtt.sdk.WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:id="@+id/my_web"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        />
+
+    <View
+        android:id="@+id/flag_bottom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_web"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#28000000"
+        android:text="home"
+        android:gravity="center"
+        ></View>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#97464646"
+        >
+        <ImageView
+            android:id="@+id/iv_vol_less"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:src="@drawable/autovolume_less"
+
+            app:layout_constraintEnd_toStartOf="@+id/bt_pre"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="0.5"
+           android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="@+id/bt_play"
+            android:layout_marginEnd="8dp" />
+        <ImageView
+            android:id="@+id/bt_pre"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/iv_palyer_pre"
+            android:padding="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/bt_play"
+
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_vol_less"
+
+            app:layout_constraintTop_toTopOf="@+id/bt_play" />
+        <ImageView
+            android:id="@+id/bt_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:contentDescription="play"
+            android:src="@drawable/iv_player_play"
+
+            app:layout_constraintEnd_toStartOf="@+id/bt_next"
+
+            app:layout_constraintStart_toEndOf="@+id/bt_pre"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            />
+        <ImageView
+            android:id="@+id/bt_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/iv_player_next"
+            android:padding="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/bt_play"
+            android:contentDescription="next"
+            app:layout_constraintEnd_toStartOf="@+id/bt_vol_plus"
+            app:layout_constraintTop_toTopOf="@+id/bt_play" />
+        <ImageView
+            android:id="@+id/bt_vol_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/autovolume_most"
+            android:padding="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/bt_next"
+            android:contentDescription="next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bt_play"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+         />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
